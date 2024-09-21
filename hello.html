@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!--CSS File for WhatsApp logo-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Custom Projects Service</title>
+    <style>
+        body {
+            z-index: 5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #000;
+            color: #fff;
+            background-repeat: repeat-y;
+        }
+
+        header {
+            text-align: center;
+            margin: 40px 0;
+            padding: 20px;
+            background-color: #111;
+            color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            z-index: 4;
+            margin: 40px 20px;
+            padding: 20px;
+            background-color: #1f1f1f;
+            color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #fff;
+        }
+
+        p {
+            color: #ccc;
+        }
+
+        .item {
+            flex: 0 0 100%;
+            margin-right: 0px;
+            padding: 20px;
+            background-color: #222;
+            border: 1px solid #444;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .btnn {
+            z-index: 9999; /* Add this line to ensure the button is above particles */
+            padding: 15px 20px;
+            background-color: #111211d9;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            display: flex;
+            align-items: center;
+        }
+
+        .btnn:hover {
+            background-color: #000000;
+        }
+
+        #particles-js {
+            z-index: 5555;
+            position: absolute;
+            width: 100%;
+            height: 360vh; /* Set height to 100% of viewport height */
+        }
+
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: stretch;
+        }
+
+        .service {
+            flex: 0 0 calc(100% / 2 - 20px); /* Two services per row with margin */
+            margin-bottom: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+            padding: 20px;
+            background-color: #444;
+            border: 1px solid #666;
+            border-radius: 10px;
+            text-align: center;
+            z-index: 9999;
+            cursor: pointer;
+            transition: background-color 0.4s ease-in-out;
+        }
+
+        .service:hover{
+            background-color: #000000d7;
+            z-index: 9999;
+        }
+
+        .service img {
+            width: 50px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        /* Media queries for responsiveness */
+        @media screen and (min-width: 768px) {
+            .service {
+                flex: 1 0 calc(100% / 3 - 20px); /* Three services per row with margin */
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            .project {
+                flex: 0 0 30%;
+            }
+
+            .service {
+                flex: 1 0 calc(100% / 3 - 20px); /* Three services per row with margin */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+    <header>
+        <h1>Welcome to Custom Projects Service</h1>
+        <p>Your one-stop solution for custom-made school and college projects!</p>
+    </header>
+
+    <section class="container">
+        <h2>Featured Projects</h2>
+        <p style="padding: 1.1%;"></p>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators" style="z-index: 9999;">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+                <li data-target="#myCarousel" data-slide-to="5"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="project">
+                        <h3>Project 1</h3>
+                        <p>Description of the project goes here.</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <h3>Project 2</h3>
+                    <p>Description of the project goes here.</p>
+                </div>
+
+                <div class="item">
+                    <h3>Project 3</h3>
+                    <p>Description of the project goes here.</p>
+                </div>
+
+                <div class="item">
+                    <h3>Project 4</h3>
+                    <p>Description of the project goes here.</p>
+                </div>
+
+                <div class="item">
+                    <h3>Project 5</h3>
+                    <p>Description of the project goes here.</p>
+                </div>
+
+                <div class="item">
+                    <h3>Project 6</h3>
+                    <p>Description of the project goes here.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container services-container">
+        <div class="service">
+            <img src="3d-printing-icon.png" alt="3D Printing Icon">
+            <h3>3D Printing</h3>
+            <p>We offer high-quality 3D printing services for various applications.</p>
+        </div>
+        <div class="service">
+            <img src="pcb-icon.png" alt="PCB Making Icon">
+            <h3>PCB Making</h3>
+            <p>Custom PCB fabrication and assembly for your electronic projects.</p>
+        </div>
+        <div class="service">
+            <img src="robotics-icon.png" alt="Robotics Icon">
+            <h3>Robotics</h3>
+            <p>Explore the world of robotics with our advanced robotics projects and solutions.</p>
+        </div>
+        <div class="service">
+            <img src="engineering-icon.png" alt="Engineering Projects Icon">
+            <h3>Engineering Projects</h3>
+            <p>Unique and innovative engineering projects tailored to your specifications.</p>
+        </div>
+        <div class="service">
+            <img src="school-projects-icon.png" alt="School Projects Icon">
+            <h3>School Projects</h3>
+            <p>Get assistance with your school projects from concept to completion.</p>
+        </div>
+        <div class="service">
+            <img src="school-projects-icon.png" alt="Electronics Components">
+            <h3>Electronics Components</h3>
+            <p>Purchase your Electronics Components from us and get Unbelievable Discounts</p>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>For more details, contact us via</h2>
+        <p style="height: 30%; padding-bottom: 1.8%;"></p>
+        <div class="text-center" style="align-items: center;">
+            <button class="btnn" onclick="redirectToGmail()" style="z-index: 9999;">
+                <i style="font-size: 2.5em; z-index: 9999;" class="fa">&#xf003;</i>
+            </button>
+            <button class="btnn" onclick="redirectToWhatsApp()" style="z-index: 9999;">
+                <i style="font-size: 2.5em; z-index: 9999;" class="fa">&#xf232;</i>
+            </button>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: '#ffffff' // Set particles color to white
+                },
+                shape: {
+                    type: 'circle',
+                    stroke: {
+                        width: 0,
+                        color: '#000000'
+                    }
+                },
+                opacity: {
+                    value: 0.3,
+                    random: false,
+                    anim: {
+                        enable: false,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                        enable: false,
+                        speed: 20,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: false
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: 'top',
+                    random: false,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false,
+                    attract: {
+                        enable: false,
+                        rotateX: 600,
+                        rotateY: 1200
+                    }
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: 'grab'
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: 'push'
+                    },
+                    resize: true
+                },
+                modes: {
+                    grab: {
+                        distance: 140,
+                        line_linked: {
+                            opacity: 1
+                        }
+                    },
+                    bubble: {
+                        distance: 400,
+                        size: 40,
+                        duration: 2,
+                        opacity: 8,
+                        speed: 3
+                    },
+                    repulse: {
+                        distance: 200,
+                        duration: 0.4
+                    },
+                    push: {
+                        particles_nb: 4
+                    },
+                    remove: {
+                        particles_nb: 2
+                    }
+                }
+            },
+            retina_detect: true
+        });
+
+        function redirectToWhatsApp() {
+            window.location.href = 'https://wa.me/+916371568550';
+        }
+
+        function redirectToGmail() {
+            // Replace 'your.email@gmail.com' with the desired Gmail address
+            var gmailAddress = 'saswatpradhan.html@gmail.com';
+
+            // Construct the Gmail URL
+            var gmailURL = 'https://mail.google.com/mail/u/0/?view=cm&fs=1&to=' + encodeURIComponent(gmailAddress);
+
+            // Redirect to Gmail
+            window.location.href = gmailURL;
+        }
+    </script>
+</body>
+
+</html>

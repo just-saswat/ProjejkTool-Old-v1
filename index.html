@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!--CSS File for WhatsApp logo-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="imp.css">
+
+    <!-- LottieFies Web Player -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <!-- JS File for Quotes -->
+    <script src="quotess.js"></script>
+    <link rel="manifest" href="./manifest.json">
+    <script>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('./sw.js')
+            .then(function(registration) {
+              console.log('Service Worker registered with scope:', registration.scope);
+            })
+            .catch(function(error) {
+              console.log('Service Worker registration failed:', error);
+            });
+        }
+      </script>
+    <title>Custom Projects Service</title>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+    <header style="z-index: 9999;">
+        <h1 style="z-index: 9999; font-weight: bolder; font-size: 430%;">Welcome to ProjektTool</h1>
+        <p style="padding-top: 30px;"></p>
+        <p id="qt" style="z-index: 9999;"></p>
+        <p>Your one-stop solution for custom-made school and college projects!</p>
+    </header>
+
+    <section class="container">
+        <h2>Featured Projects</h2>
+        <p style="padding: 1.1%;"></p>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators" style="z-index: 9999;">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+                <li data-target="#myCarousel" data-slide-to="5"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active" style="background-image: url(3dpimg.jpg); background-repeat: no-repeat; background-size: cover;"></div>
+                <div class="item" style="background-image: url(scpimg.jpeg); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%;"></div>
+                <div class="item" style="background-image: url(engimg.jpg); background-repeat: no-repeat; background-size: cover;"></div>
+                <div class="item" style="background-image: url(pcbimg.jpg); background-repeat: no-repeat; background-size: cover;"></div>
+                <div class="item" style="background-image: url(eleimg.jpeg); background-repeat: no-repeat; background-size: cover;"></div>
+                <div class="item" style="background-image: url(roimg.jpg); background-repeat: no-repeat; background-size: cover;"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container services-container">
+        <div class="service">
+            <lottie-player src="3dp.json" class="roboicon" background="transparent"  speed="0.3"  style="width: 70%; height: auto; margin: auto;" loop autoplay></lottie-player>
+            <h3>3D Printing</h3>
+            <p>We offer high-quality 3D printing services for various applications.</p>
+        </div>
+        <div class="service">
+            <lottie-player src="circuit.json" class="roboicon" background="transparent"  speed="0.7"  style="width: 70%; height: auto; margin: auto;" loop autoplay></lottie-player>
+            <h3>PCB Making</h3>
+            <p>Custom PCB fabrication and assembly for your electronic projects.</p>
+        </div>
+        <div class="service">
+            <lottie-player src="RoboWhite.json" class="roboicon" background="transparent"  speed="1"  style="width: 70%; height: auto; margin: auto;" loop autoplay></lottie-player>
+            <h3>Robotics</h3>
+            <p>Explore the world of robotics with our advanced robotics projects and solutions.</p>
+        </div>
+        <div class="service">
+            <lottie-player src="brain.json" class="roboicon" background="transparent"  speed="2"  style="width: 70%; height: auto; margin: auto;" loop autoplay></lottie-player>
+            <h3>School Projects</h3>
+            <p>Get expert guidance and assistance with your school projects from core concept to completion.</p>
+        </div>
+        <div class="service">
+            <lottie-player src="eng.json" class="roboicon" background="transparent"  speed="1"  style="width: 70%; height: auto; margin: auto;" loop autoplay></lottie-player>
+            <h3>Engineering Projects</h3>
+            <p>Unique and innovative engineering projects tailored to your specifications.</p>
+        </div>
+        <div class="service">
+            <lottie-player src="shop.json" class="roboicon" background="transparent"  speed="1"  style="width: 70%; height: auto; margin: auto;" loop autoplay></lottie-player>
+            <h3>Electronics Components</h3>
+            <p>Purchase your Electronics Components from us and get Unbelievable Discounts From Us</p>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>For more details, contact us via</h2>
+
+        <p style="height: 30%; padding-bottom: 1.8%;"></p>
+
+        <div class="text-center" style="align-items: center; font-size: 50px;">
+
+            <button class="btnn" onclick="redirectToGmail()" style="z-index: 9999; padding-left: 10px; padding-right: 10px;">
+                <i style="z-index: 9999;" class="fa">&#xf003;</i>
+            </button>
+
+            <button class="btnn" onclick="redirectToWhatsApp()" style="z-index: 9999;  padding-left: 10px; padding-right: 10px;">
+                <i style=" z-index: 9999;" class="fa">&#xf232;</i>
+            </button>
+
+            <button class="btnn" onclick="redirectToWhatsApp()" style="z-index: 9999;  padding-left: 10px; padding-right: 10px;">
+                <i style="z-index: 9999;" class="fa">&#xf16d;</i>
+            </button>
+
+            <button class="btnn" onclick="redirectToWhatsApp()" style="z-index: 9999;  padding-left: 10px; padding-right: 10px;">
+                <i style="z-index: 9999;" class="fa">&#xf2c6;</i>
+            </button>
+        </div>
+        
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="mainimp.js"></script> 
+      
+</body>
+</html>
